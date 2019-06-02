@@ -1,4 +1,26 @@
-// Place all the styles related to the talks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-content{
+  .top-word{
+    color: #00FFFF;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 300px;
+  }
 
+  .enter-btn{
+    width: 200px;
+    height: 100px;
+    background: #FF3300;
+    border-radius: 60px;
+    opacity: 0.8;
+    margin-top: 200px;
+    margin-left: 1100px;
+
+    .enter-word{
+      color: #FFF;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 40px; 
+    }
+  }
+}
