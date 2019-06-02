@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+concept
+・若者（高校生以下）の自殺を止める
+・既存アプリはいじめを止めるのみだが、このアプリではイジメ防止だけでなく、環境を変えることを進める
 
-Things you may want to cover:
+機能
+・匿名での通報（画像、動画、音声）
+・相談機能（ログイン必須）、管理者と相談（想定ではスクールカウンセラーや他機関）
 
-* Ruby version
+notifyテーブル
+・school
+・message
+・image/video/voice
 
-* System dependencies
 
-* Configuration
+talkテーブル
+・message
+・image
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
