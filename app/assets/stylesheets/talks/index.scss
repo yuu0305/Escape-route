@@ -4,6 +4,7 @@
   background: #EEEEEE;
   position: fixed;
   text-align: center;
+  z-index: 111;
   .header-logo-word{
   font-size: 20px;
   font-weight: bold;
@@ -15,41 +16,44 @@
   }
 }
 
-.talks-select{
-  display: flex;
-  padding-top: 80px;
-  .left-select{
-    display: none;
-    width: 350px;
-    height: 350px;
-    background: red;
-    margin: 150px 190px ;
-    opacity: 0.6;
-    border-radius: 150px;
-    cursor: pointer;
-    .left-select-word{
-      color: #FFF;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      padding-top: 150px;
+.path{
+  text-decoration: none;
+}
+  .talks-select{
+    display: flex;
+    padding-top: 80px;
+    .left-select{
+      display: none;
+      width: 350px;
+      height: 350px;
+      background: red;
+      margin: 150px 160px ;
+      opacity: 0.6;
+      border-radius: 150px;
+      cursor: pointer;
+      .left-select-word{
+        color: #FFF;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 150px;
+      }
     }
-  }
-  .right-select{
-    display: none;
-    width: 350px;
-    height: 350px;
-    background: blue;
-    margin: 150px 200px;
-    opacity: 0.5;
-    border-radius: 150px;
-    cursor: pointer;
-    .right-select-word{
-      color: #FFF;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      padding-top: 150px;
+    .right-select{
+      display: none;
+      width: 350px;
+      height: 350px;
+      background: blue;
+      margin: 150px 200px;
+      opacity: 0.5;
+      border-radius: 150px;
+      cursor: pointer;
+      .right-select-word{
+        color: #FFF;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 150px;
+      }
     }
-  }
 }

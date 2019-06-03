@@ -1,30 +1,21 @@
   <%= render 'shared/header' %>
-
-  <div class = "talks-select">
-    <div class = "left-select">
-      <div  class = "left-select-word">
-        通報する
+  <%= link_to  "/notifies/new", method: :get ,class: "path" do %>
+    <div class = "talks-select">
+      <div class = "left-select">
+        <div  class = "left-select-word">
+          通報する
+        </div>
       </div>
-    </div>
+  <%end%>
 
-
-    <div class = "right-select">
-    <div  class = "right-select-word">
-      相談する
-    </div>
-    </div>
+    <%= link_to  "/talks/new", method: :get , class: "path" do %>
+      <div class = "right-select">
+      <div  class = "right-select-word">
+        相談する
+      </div>
+      </div>
+    <%end%>
   </div>
 
 
 
-
-
-
- <%# <%= link_to 'Escape Route', "/notifies/new", method: :get ,class: "left-select-word" do %> %>
-      <%# <div  class = "left-select-word">
-        通報する
-      </div>
-    <% end %>
-
-
-<%# <div></div> %>
