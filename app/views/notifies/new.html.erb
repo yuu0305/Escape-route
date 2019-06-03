@@ -1,0 +1,40 @@
+<%= render 'shared/header' %>
+
+<div class = "input-field">
+  <div class = "input-field__text">
+    <label for="school">学校名: 
+      <%= text_field :title, class: "name-of-school" %>
+      <div class = "necessary">※入力必須</div>
+    </label>
+    <label for="school">学年: 
+    <select name="select" id="select">
+      <option selected="selected" value="blank">選択 ▼</option>
+      <option  value="value1">1</option>
+      <option  value="value2">2</option>
+      <option  value="value3">3</option>
+      <option  value="value4">4</option>
+      <option  value="value5">5</option>
+      <option  value="value6">6</option>
+    </select>
+    <div class = "necessary">※入力必須</div>
+    </label>
+    <label for="school">メッセージ:
+    <textarea cols="30" name="text" placeholder="状況など簡潔にご説明ください" rows="2" class="textbox"></textarea>
+    <div class = "necessary">※入力必須</div>
+    </label>
+    <input type="submit" value="SENT">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<%# <div></div> %>
+
+ <%# <%= form_with(model: blog, local: true) do |form| %>
+  <%# いろんなフォーム
+<% end %> 
