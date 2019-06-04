@@ -1,0 +1,55 @@
+.input-field{
+  padding-top: 130px;
+  &__text{
+    position: relative;
+    background: #EEEEEE;
+    width:500px;
+    height: 400px;
+    margin: 0 auto;
+    .school-info{
+      display: flex;
+      margin-bottom: 20px;
+      padding: 25px;
+      .school{
+        padding-right: 20px;
+      }
+      .grade{
+        padding-left: 25px;
+      }
+    }
+    .message{
+      padding: 25px;
+    }
+
+    .proof{
+      padding: 25px;
+      position: relative;
+      img{
+        position: absolute;
+        top:20px;left: 200px;
+        cursor: pointer;
+        image{
+        height: 100px;
+        width: 100px;
+        }
+      }
+    }
+
+    
+    .necessary{
+      color: red;
+      font-size: 10px;
+    }
+    .submit-btn{
+      font-size: 20px;
+      border-radius: 20px;
+      background    : #000066;
+      color         : #ffffff;
+      border        : 2px solid #000066;
+      cursor: pointer;
+      position: absolute;
+      right: 20px
+    }
+  }
+}
+
