@@ -1,21 +1,62 @@
-  <%= render 'shared/header' %>
-  <%= link_to  "/notifies/new", method: :get ,class: "path" do %>
-    <div class = "talks-select">
-      <div class = "left-select">
-        <div  class = "left-select-word">
-          通報する
-        </div>
-      </div>
-  <%end%>
+<%= render 'shared/header' %>
 
-    <%= link_to  "/talks/new", method: :get , class: "path" do %>
-      <div class = "right-select">
-      <div  class = "right-select-word">
-        相談する
-      </div>
-      </div>
-    <%end%>
+<div class = "chat-main">
+
+  <div class = "chat-main__content">
+
+    <div class = "time">
+      2019/06/15
+    </div>
+    
+    <div class = "my-chat">
+      テスト
+    </div>
+
+    <div class = "the_other_person-chat">
+      テスト
+    </div>
+
+
+    <div class = "my-chat">
+      テスト
+    </div>
+
+    <div class = "the_other_person-chat">
+      テスト
+    </div>
+
+　  <div class = "my-chat">
+      テスト
+    </div>
+
+    <div class = "the_other_person-chat">
+       テスト
+    </div>
+
+     <div class = "the_other_person-chat">
+       テスト
+    </div>
+    
+    <div class = "the_other_person-chat">
+       テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+    </div>
+
   </div>
+</div>
 
 
 
+
+<div class = "chat-form">
+  <%# <%form_with = %>
+  <textarea cols="30" name="text" placeholder="message" rows="2" class="message-form"></textarea>
+  <input type="submit" value="送信", class= "submit-btn">
+</div>
+
+
+
+
+<%#
+<div class = "">
+</div>
+ %>

@@ -1,59 +1,109 @@
-.header{
+
+.chat-main{
+  padding-top: 80px;
+  background: #333333;
+  min-height: calc(100vh - 100px);
+  padding-bottom: 100px;
+  &__content{
+    width: 800px;
+    min-height: calc(100vh - 100px);
+    margin: 0 auto;
+    background: #FFF;
+    overflow: scroll;
+    .time{
+      text-align:center;
+      padding-top: 10px;
+    }
+    /* 吹き出し本体 - 普通の吹き出し */
+  .my-chat{
+    width: 200px;
+    margin: 20px;
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    background-color: #005FFF;
+    border-radius: 10px;
+    margin-left: 530px;
+  }
+  /* 三角アイコン - 普通の吹き出し */
+  .my-chat::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    right: -15px;
+    top: 20px;
+    border-left: 15px solid #005FFF;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+
+  }
+
+
+  /* 吹き出し本体 - 枠線付きの吹き出し */
+  .the_other_person-chat{
+    width: 200px;
+    margin: 20px;
+    position: relative;
+    padding: 20px;
+    background-color: #EEE;
+    border: 1px solid #EEE;
+    border-radius: 10px;         /* 角丸を指定 */
+  }
+  /* 三角アイコン - 枠線付きの吹き出し */
+  .the_other_person-chat::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -15px;
+    top: 20px;
+    border-right: 15px solid #EEE;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  .the_other_person-chat::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -12px;
+    top: 20px;
+    border-right: 15px solid #EEE;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  }
+
+}
+
+.chat-form{
   width: 100vw;
-  height: 80px;
+  height: 100px;
   background: #EEEEEE;
   position: fixed;
-  text-align: center;
-  z-index: 111;
-  .header-logo-word{
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  // margin: 0 auto;
-  padding-top:25px;
-  text-decoration: none;
-  display: inline-block;
+  bottom: 0;
+  .message-form{
+    width: 1000px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 200px;
+  }
+  .submit-btn{
+  border-radius : 10px;
+  font-size     : 8pt;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #005FFF;
+  color         : #ffffff;
+  line-height   : 1em;
+  position: absolute;
+  right: 160px; bottom: 12px;
   }
 }
 
-.path{
-  text-decoration: none;
-}
-  .talks-select{
-    display: flex;
-    padding-top: 80px;
-    .left-select{
-      display: none;
-      width: 350px;
-      height: 350px;
-      background: red;
-      margin: 150px 160px ;
-      opacity: 0.6;
-      border-radius: 150px;
-      cursor: pointer;
-      .left-select-word{
-        color: #FFF;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        padding-top: 150px;
-      }
-    }
-    .right-select{
-      display: none;
-      width: 350px;
-      height: 350px;
-      background: blue;
-      margin: 150px 200px;
-      opacity: 0.5;
-      border-radius: 150px;
-      cursor: pointer;
-      .right-select-word{
-        color: #FFF;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        padding-top: 150px;
-      }
-    }
-}
+
+
