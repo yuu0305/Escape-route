@@ -1,0 +1,51 @@
+.header{
+  width: 100vw;
+  height: 80px;
+  background: #EEEEEE;
+  position: fixed;
+  text-align: center;
+  z-index: 111;
+  .header-logo-word{
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding-top:25px;
+  text-decoration: none;
+  display: inline-block;
+  }
+  .authentication{
+    position: absolute;
+    top: 25px;right: 30px;
+    padding: 10px;
+    font-size: 10px;
+    .user-sign-out{
+      padding: 10px;
+      border: solid 0;
+      border-radius: 20px;
+      background: #FF6600;
+      .user-log-out{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .user-sign{
+      .user-log-in{
+        padding: 10px;
+        text-decoration: none;
+        border: solid 0;
+        border-radius: 20px;
+        background: #FF6600;
+        color: #FFF;
+      }
+      .user-sign-in{
+        padding: 10px;
+        text-decoration: none;
+        border: solid 0;
+        border-radius: 20px;
+        background: #FF6600;
+        color: #FFF;
+      }
+    }
+  }
+
+}
