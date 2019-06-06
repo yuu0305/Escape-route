@@ -47,16 +47,18 @@
 
 
 
-<div class = "chat-form">
+<%# <div class = "chat-form">
   <%# <%form_with = %>
-  <textarea cols="30" name="text" placeholder="message" rows="2" class="message-form"></textarea>
+  <%# <textarea cols="30" name="message" placeholder="message" rows="2" class="message-form"></textarea> %>
+  <%# <input type="submit" value="送信", class= "submit-btn"> %>
+<%# </div> %>
+
+
+
+
+<div class = "chat-form">
+  <%= form_with model: @talk,local: true do |f|  %>
+  <%= f.text_area :message, cols:"30" ,placeholder:"message" ,class:"message-form" %>
   <input type="submit" value="送信", class= "submit-btn">
+  <% end%>
 </div>
-
-
-
-
-<%#
-<div class = "">
-</div>
- %>
