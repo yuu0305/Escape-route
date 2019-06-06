@@ -14,7 +14,6 @@
       text-align:center;
       padding-top: 10px;
     }
-    /* 吹き出し本体 - 普通の吹き出し */
   .my-chat{
     width: 200px;
     margin: 20px;
@@ -25,7 +24,6 @@
     border-radius: 10px;
     margin-left: 530px;
   }
-  /* 三角アイコン - 普通の吹き出し */
   .my-chat::before{
     content: '';
     position: absolute;
@@ -41,7 +39,7 @@
   }
 
 
-  /* 吹き出し本体 - 枠線付きの吹き出し */
+
   .the_other_person-chat{
     width: 200px;
     margin: 20px;

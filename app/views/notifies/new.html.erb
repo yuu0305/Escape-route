@@ -2,52 +2,42 @@
 
 <div class = "input-field">
   <div class = "input-field__text">
-    <div class='school-info'>
-      <div class = "school">
-        学校名:
-          <%= text_field :title, class:"input-name-of-school" %>
-          <div class = "necessary">※入力必須</div>
+    <%= form_with model: @notify,local: true do |f| %>
+      <div class='school-info'>
+        <div class = "school">
+          学校名:
+            <%= f.text_field :school, class:"input-name-of-school" %>
+            <div class = "necessary">※入力必須</div>
+        </div>
+
+        <div class = "grade">学年:
+        <%= f.select :grade, [ ["1", "1"], ["2", "2"], ["3" , "3"]  ], :prompt => "選択してください" %>
+        <div class = "necessary">※入力必須</div>
+        </div>
       </div>
 
-      <div class = "grade">学年:
-      <select name="select" id="select">
-        <option selected="selected" value="blank">選択 ▼</option>
-        <option  value="value1">1</option>
-        <option  value="value2">2</option>
-        <option  value="value3">3</option>
-        <option  value="value4">4</option>
-        <option  value="value5">5</option>
-        <option  value="value6">6</option>
-      </select>
+      <div class = "message">
+      <label for="message">メッセージ:
+      <%= f.text_area :text,placeholder:"状況など簡潔にご説明ください" %>
+
       <div class = "necessary">※入力必須</div>
+      </label>
       </div>
-    </div>
-  
-    <div class = "message">
-    <label for="message">メッセージ:
-    <textarea cols="30" name="text" placeholder="状況など簡潔にご説明ください" rows="2" class="textbox"></textarea>
-    <div class = "necessary">※入力必須</div>
-    </label>
-    </div>
-    
-    <div class = "proof">
-      画像・動画・音声など:
-        <%= file_field :image, class: "image", style: "display:none;" %>
-          <%# <%= image_tag 'https://img.icons8.com/material-outlined/24/000000/image.png'%> 
 
-      <div class = "necessary">※入力必須</div>
-    </div>
+      <div class = "proof">
+        画像・動画・音声など:
+          <%= file_field :image, class: "image", style: "display:none;" %>
+            <%# <%= image_tag 'https://img.icons8.com/material-outlined/24/000000/image.png'%> 
+        <div class = "any">※推奨</div>
+      </div>
 
-    <input type="submit" value="送信" class="submit-btn";>
+      <input type="submit" value="送信" class="submit-btn";>
+    <% end %>
   </div>
 </div>
 
-
-<%# 
-.chat-main__form__picture
-        = f.label :image do
-          = fa_icon 'picture-o'
-          = f.file_field :image, class: 'message_image', style:"display:none" %>
+<%# <%= f.options %> 
+<%# 選択 ▼ %>
 
 
 <%# <div></div> %>
@@ -55,3 +45,4 @@
  <%# <%= form_with(model: blog, local: true) do |form| %>
   <%# いろんなフォーム
 <% end %> 
+
