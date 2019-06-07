@@ -7,10 +7,12 @@ class NotifiesController < ApplicationController
     @notify = Notify.new(notify_params)
     @notify.save
   end
-end
+
 
 
 private
   def notify_params
-    params.require(:notify).permit( :school,:grade , :text)
+    params.require(:notify).permit(:school,:grade ,:text)
   end
+
+end

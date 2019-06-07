@@ -3,21 +3,27 @@ class TalksController < ApplicationController
 
   def index
     @talk = Talk.new
-  end
-
-  def new
-    @talk = Talk.new(talk.params)
-    @talk.save
+    # @right_talks = Talk.where(user_id: current_user.id)
+    # binding.pry
+    # @left_talks = 
+    # binding.pry
   end
 
   def create
     @talk = Talk.new(talk_params)
     # binding.pry
     @talk.save
+    redirect_to "/talks/"
   end
 
   private
   def talk_params
-    params.require(:talk).permit(:message)
+    params.require(:talk).permit(:message).merge(user_id: current_user.id)
   end
 end
+
+
+
+# params.require(:talk).permit(:message).merge(user_id: params[:user_id])
+
+# user_id: current_user.id
