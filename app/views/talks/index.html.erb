@@ -6,41 +6,20 @@
 
     <div class = "time">
       2019/06/15
+     <%# <%= @time%> %>
     </div>
     
-    <div class = "my-chat">
-      テスト
-    </div>
+    <% @right_talks.each do |r_talk|%>
+      <div class = "my-chat">
+        <%= r_talk.message%>
+      </div>
+    <% end%>
 
-    <div class = "the_other_person-chat">
-      テスト
-    </div>
-
-
-    <div class = "my-chat">
-      テスト
-    </div>
-
-    <div class = "the_other_person-chat">
-      テスト
-    </div>
-
-　  <div class = "my-chat">
-      テスト
-    </div>
-
-    <div class = "the_other_person-chat">
-       テスト
-    </div>
-
-     <div class = "the_other_person-chat">
-       テスト
-    </div>
-    
-    <div class = "the_other_person-chat">
-       テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-    </div>
-
+    <% @left_talks.each do |l_talk|%>
+      <div class = "the_other_person-chat">
+        <%= l_talk.message%>
+      </div>
+    <% end%>
   </div>
 </div>
 
