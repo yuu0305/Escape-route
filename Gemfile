@@ -67,3 +67,4 @@ gem 'sprockets', '3.7.2'
 gem "jquery-rails"
 gem 'devise'
 gem 'rails_admin', '~> 2.0.0.beta'
+gem 'cancancan'
