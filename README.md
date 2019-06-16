@@ -13,8 +13,10 @@ notifyテーブル
 ・message
 ・image/video/voice
 
+users_roomテーブル
+・user_id
 
 talkテーブル
+・users_room_id
+・user_id
 ・message
-・image
-

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_052754) do
   create_table "talks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "message", null: false
     t.integer "user_id"
+    t.integer "users_room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

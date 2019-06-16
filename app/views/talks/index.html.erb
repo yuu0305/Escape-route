@@ -8,35 +8,20 @@
       2019/06/15
      <%# <%= @time%> %>
     </div>
-    
-    <% @right_talks.each do |r_talk|%>
-      <div class = "my-chat">
-        <%= r_talk.message%>
-      </div>
-    <% end%>
 
-    <% @left_talks.each do |l_talk|%>
-      <div class = "the_other_person-chat">
-        <%= l_talk.message%>
+      <div class = "my-chat">
+        aa
       </div>
-    <% end%>
+
+      <div class = "the_other_person-chat">
+       sssssss
+      </div>
   </div>
 </div>
 
 
-
-
-<%# <div class = "chat-form">
-  <%# <%form_with = %>
-  <%# <textarea cols="30" name="message" placeholder="message" rows="2" class="message-form"></textarea> %>
-  <%# <input type="submit" value="送信", class= "submit-btn"> %>
-<%# </div> %>
-
-
-
-
 <div class = "chat-form">
-  <%= form_with model: @talk,local: true do |f|  %>
+  <%= form_with model: [@room, @talk],local: true do |f|  %>
   <%= f.text_area :message, cols:"30" ,placeholder:"message" ,class:"message-form" %>
   <input type="submit" value="送信", class= "submit-btn">
   <% end%>
