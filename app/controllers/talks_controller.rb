@@ -10,7 +10,6 @@ class TalksController < ApplicationController
     @left_talks = Talk.where.not(user_id: current_user.id).order("created_at ASC")
     # binding.pry
     @time = Time.now
-    @room = UsersRoom.find(params[:users_room_id])
   end
 
   def create
