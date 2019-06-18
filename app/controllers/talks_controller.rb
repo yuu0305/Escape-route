@@ -11,10 +11,10 @@ class TalksController < ApplicationController
   end
 
   def create
-    # @talk = @Users_room.messages.new(talk_params)
+    @talk =Talk.new(talk_params)
     # binding.pry
     @talk.save
-    redirect_to "/talks/"
+    redirect_to "/users_rooms/#{@room.id}/talks"
   end
 
   private
