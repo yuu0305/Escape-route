@@ -10,14 +10,16 @@
     </div>
 
     <% @talks.each do |talk|%>
+      <% unless talk.user.allowed == true %>
       <div class = "my-chat">
         <%= talk.message%>
       </div>
-
+      
+      <% else %>
       <div class = "the_other_person-chat">
-       w
+        <%= talk.message%>
       </div>
-
+      <%end %>
     <%end%>
   </div>
 </div>
