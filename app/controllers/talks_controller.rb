@@ -3,20 +3,15 @@ class TalksController < ApplicationController
   before_action :set_users_room
 
   def index
-    # binding.pry
     @talk = Talk.new
-    @talks = Talk.where(user_room_id: params[:users_room_id])
-    @right_talks = Talk.where(user_id: current_user.id).order("created_at ASC")
-    @left_talks = Talk.where.not(user_id: current_user.id).order("created_at ASC")
-    # binding.pry
+    @talks = Talk.where(users_room_id: params[:users_room_id])
     @time = Time.now
   end
 
   def create
-    # @talk = @Users_room.messages.new(talk_params)
-    # binding.pry
+    @talk =Talk.new(talk_params)
     @talk.save
-    redirect_to "/talks/"
+    redirect_to "/users_rooms/#{@room.id}/talks"
   end
 
   private

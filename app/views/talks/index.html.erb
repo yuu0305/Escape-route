@@ -9,17 +9,17 @@
      <%# <%= @time%>
     </div>
 
-    <%# <% @talks.each do |talk|%> %>
-      <div class = "my-chat">
-        <%# <%= talk.message%> %>
-        a
-      </div>
-
-      <div class = "the_other_person-chat">
-      w
-      </div>
-
-    <%# <%end%> %>
+    <% @talks.each do |talk|%>
+      <% unless talk.user.allowed == true %>
+        <div class = "my-chat">
+          <%= talk.message%>
+        </div>
+      <% else %>
+        <div class = "the_other_person-chat">
+          <%= talk.message%>
+        </div>
+      <% end %>
+    <%end%>
   </div>
 </div>
 
