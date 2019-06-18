@@ -3,16 +3,13 @@ class TalksController < ApplicationController
   before_action :set_users_room
 
   def index
-    # binding.pry
     @talk = Talk.new
     @talks = Talk.where(users_room_id: params[:users_room_id])
-    # binding.pry
     @time = Time.now
   end
 
   def create
     @talk =Talk.new(talk_params)
-    # binding.pry
     @talk.save
     redirect_to "/users_rooms/#{@room.id}/talks"
   end
