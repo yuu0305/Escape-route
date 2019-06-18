@@ -6,6 +6,8 @@ class TalksController < ApplicationController
     @talk = Talk.new
     @talks = Talk.where(users_room_id: params[:users_room_id])
     @time = Time.now
+    @user = User.find(current_user.id)
+    # binding.pry 
   end
 
   def create

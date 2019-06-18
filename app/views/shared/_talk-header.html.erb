@@ -1,7 +1,12 @@
 <div class = "header">
-  <% if @user.allowed == true %>
-    <% link_to 'メッセージ一覧' , users_rooms_path, method: :get ,class: "message-list"  %>
+　<% if @user.allowed == true %>
+    <div class = "message-list">
+      <%# <% link_to  "/users_rooms", method: :get  do %>
+        <div  class = "message-list-word">
+          <%= link_to  "Messages" ,"/users_rooms", method: :get ,class: "message-list-word"  %>
+        </div>
+      <%# <% end %> 
+    </div>
   <% end %>
   <%= link_to 'Escape Route', "/routes", method: :get ,class: "header-logo-word" %>
 </div>
-
