@@ -1,0 +1,7 @@
+<div class = "header">
+  <% if @user.allowed == true %>
+    <% link_to 'メッセージ一覧' , users_rooms_path, method: :get ,class: "message-list"  %>
+  <% end %>
+  <%= link_to 'Escape Route', "/routes", method: :get ,class: "header-logo-word" %>
+</div>
+
