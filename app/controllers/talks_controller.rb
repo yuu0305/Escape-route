@@ -5,9 +5,9 @@ class TalksController < ApplicationController
   def index
     # binding.pry
     @talk = Talk.new
-    @talks = Talk.where(user_room_id: params[:users_room_id])
-    @right_talks = Talk.where(user_id: current_user.id).order("created_at ASC")
-    @left_talks = Talk.where.not(user_id: current_user.id).order("created_at ASC")
+    @talks = Talk.where(users_room_id: params[:users_room_id])
+    # @right_talks = Talk.where(user_id: current_user.id).order("created_at ASC")
+    # # @left_talks = Talk.where.not(user_id: current_user.id).order("created_at ASC")
     # binding.pry
     @time = Time.now
   end
