@@ -5,12 +5,11 @@
   <div class = "chat-main__content">
 
     <div class = "time">
-      2019/06/15
-     <%# <%= @time%>
+     <%= @time%>
     </div>
 
     <% @talks.each do |talk|%>
-      <% unless talk.user.allowed == true %>
+      <% if talk.user.id == current_user.id %>
         <div class = "my-chat">
           <%= talk.message%>
         </div>
@@ -32,8 +31,3 @@
 </div>
 
 
-    <%# <% @left_talks.each do |l_talk|%> %>
-      <%# <div class = "the_other_person-chat">
-        <%= l_talk.message%> %>
-      <%# </div>
-    <% end%> %>
