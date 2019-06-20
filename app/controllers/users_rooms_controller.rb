@@ -2,7 +2,8 @@ class UsersRoomsController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    
+    @rooms = UsersRoom.all
+    # binding.pry
   end
 
 
@@ -17,16 +18,4 @@ before_action :authenticate_user!
     end
   end
 
-  # private
-  # def users_room_params
-  #   params.require(:usersroom).merge(user_id: current_user.id)
-  # end
 end
-
-
-
-
-
-# @room = UsersRoom.new(user_id: current_user.id)
-# @room.save!
-# redirect_to "/users_rooms/#{@room.id}/talks"

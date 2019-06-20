@@ -1,3 +1,51 @@
-// Place all the styles related to the users_rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.another-header{
+  width: 100vw;
+  height: 80px;
+  background: #EEE;
+  text-align: center;
+  z-index: 111;
+  .header-logo-word{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 25px;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+
+.message-box{
+  width: 1000px;
+  height: 100px;
+  background: #EEE;
+  margin: 60px auto;
+  border: solid 1px;
+  border-radius: 20px;
+  
+  .user-info{
+    display: flex;
+    border-bottom: solid 1px;
+    padding: 20px;
+    &__number{
+      padding-right: 25px;
+    }
+    &__name{
+      padding-right: 100px;
+
+    }
+    &__furigana{
+      padding-right: 100px;
+    }
+    &__school{
+      padding-right: 100px;
+    }
+  }
+  .user-message{
+    padding: 10px 0 10px 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 850px;
+    text-overflow: ellipsis;
+  }
+}
