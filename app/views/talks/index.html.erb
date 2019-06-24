@@ -11,17 +11,16 @@
     <% @talks.each do |talk|%>
       <% if talk.user.id == current_user.id %>
         <div class = "my-chat">
-          <%= talk.message%>
+          <%= raw(talk.message.gsub(/\n/, "<br>"))%>
         </div>
       <% else %>
         <div class = "the_other_person-chat">
-          <%= talk.message%>
+          <%= raw(talk.message.gsub(/\n/, "<br>"))%>
         </div>
       <% end %>
     <%end%>
   </div>
 </div>
-
 
 <div class = "chat-form">
   <%= form_with model: [@room, @talk],local: true do |f|  %>
