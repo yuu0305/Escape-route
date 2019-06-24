@@ -3,7 +3,7 @@
 
 <div class = "talks-select">
   <div class = "left-select">
-    <%= link_to  "/notifies/new", method: :get  do %>
+    <%= link_to  "/notifies/new", method: :get ,class: "path" do %>
       <div  class = "left-select-word">
         通報する
       </div>
@@ -11,7 +11,7 @@
   </div>
 
   <div class = "right-select">
-    <%= link_to  "/users_rooms", method: :post do %>
+    <%= link_to  "/users_rooms", method: :post , class: "path" do %>
       <div  class = "right-select-word">
         相談する
       </div>

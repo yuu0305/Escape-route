@@ -14,38 +14,41 @@
   }
 }
 
+.room-path{
+  text-decoration: none;
+  color: #000;
+  .message-box{
+    width: 1000px;
+    height: 100px;
+    background: #EEE;
+    margin: 60px auto;
+    border: solid 1px;
+    border-radius: 20px;
+    
+    .user-info{
+      display: flex;
+      border-bottom: solid 1px;
+      padding: 20px;
+      &__number{
+        padding-right: 25px;
+      }
+      &__name{
+        padding-right: 100px;
 
-.message-box{
-  width: 1000px;
-  height: 100px;
-  background: #EEE;
-  margin: 60px auto;
-  border: solid 1px;
-  border-radius: 20px;
-  
-  .user-info{
-    display: flex;
-    border-bottom: solid 1px;
-    padding: 20px;
-    &__number{
-      padding-right: 25px;
+      }
+      &__furigana{
+        padding-right: 100px;
+      }
+      &__school{
+        padding-right: 100px;
+      }
     }
-    &__name{
-      padding-right: 100px;
-
+    .user-message{
+      padding: 10px 0 10px 40px;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 850px;
+      text-overflow: ellipsis;
     }
-    &__furigana{
-      padding-right: 100px;
-    }
-    &__school{
-      padding-right: 100px;
-    }
-  }
-  .user-message{
-    padding: 10px 0 10px 40px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 850px;
-    text-overflow: ellipsis;
   }
 }

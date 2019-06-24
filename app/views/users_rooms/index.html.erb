@@ -4,6 +4,7 @@
 
 
 <% @rooms.each do |room|%>
+  <%= link_to "/users_rooms/#{room.id}/talks" ,class: "room-path" do %>
     <div class = "message-box" >
       <div class = "user-info" >
         <div class = "user-info__number"> <%=room.id%> )</div>
@@ -17,5 +18,5 @@
         <%end%>
       </div>
     </div>
-
+  <%end%>
 <%end%>
