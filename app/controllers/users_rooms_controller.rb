@@ -2,7 +2,7 @@ class UsersRoomsController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @rooms = UsersRoom.all.order(id: 'DESC')
+    @rooms = UsersRoom.all.order(id: 'DESC').page(params[:page]).per(10)
     # binding.pry
   end
 
