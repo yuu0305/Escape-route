@@ -1,0 +1,10 @@
+<div class = "header">
+　<% if @user.allowed == true %>
+    <div class = "message-list">
+        <div  class = "message-list-word">
+          <%= link_to  "Messages" ,"/users_rooms", method: :get ,class: "message-list-word"  %>
+        </div>
+    </div>
+  <% end %>
+  <%= link_to 'Escape Route', "/routes", method: :get ,class: "header-logo-word" %>
+</div>

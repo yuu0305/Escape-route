@@ -6,12 +6,26 @@
   text-align: center;
   z-index: 111;
   .header-logo-word{
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  padding-top:25px;
-  text-decoration: none;
-  display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 25px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .message-list{
+    position: absolute;
+    top: 20px;left: 20px;
+    border: solid 0;
+    border-radius: 20px;
+    background: #FF6600;
+    cursor: pointer;
+    .message-list-word{
+      color: #FFF;
+      font-size:15px;
+      padding: 10px;
+      text-decoration: none;
+    }
   }
   .authentication{
     

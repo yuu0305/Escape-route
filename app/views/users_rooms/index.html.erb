@@ -1,0 +1,23 @@
+<div class = "another-header">
+  <%= link_to 'Escape Route', "/routes", method: :get ,class: "header-logo-word" %>
+</div>
+
+
+<% @rooms.each do |room|%>
+  <%= link_to "/users_rooms/#{room.id}/talks" ,class: "room-path" do %>
+    <div class = "message-box" >
+      <div class = "user-info" >
+        <div class = "user-info__number"> <%=room.id%> )</div>
+        <div class = "user-info__name" >名前/  <%=room.user.name %></div>
+        <div class = "user-info__furigana" >ふりがな/  <%=room.user.furigana %></div>
+        <div class = "user-info__school" >学校/ <%=room.user.school %></div>
+      </div>
+      <div class = "user-message" >message /
+        <%room.talks.each do |talk|%>
+          <%=talk.message%> /
+        <%end%>
+      </div>
+    </div>
+  <%end%>
+<%end%>
+<%= paginate(@rooms) %>
