@@ -5,7 +5,9 @@ class TalksController < ApplicationController
   def index
     @talk = Talk.new
     @talks = Talk.where(users_room_id: params[:users_room_id])
-    @time = @talks.first.created_at.time
+    if @talks.present?
+      @time = @talks.first.created_at.time
+    end
     @user = User.find(current_user.id)
   end
 

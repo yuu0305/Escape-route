@@ -2,7 +2,7 @@ class UsersRoomsController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @rooms = UsersRoom.all
+    @rooms = UsersRoom.all.order(id: 'DESC')
     # binding.pry
   end
 

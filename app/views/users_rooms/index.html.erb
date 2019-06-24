@@ -3,61 +3,19 @@
 </div>
 
 
-<div class = "message-box" >
-  <div class = "user-info" >
-    <div class = "user-info__number"> 1 )</div>
-    <div class = "user-info__name" >名前/  安田</div>
-    <div class = "user-info__furigana" >ふりがな/  やすだ</div>
-    <div class = "user-info__school" >学校/ 財前小学校</div>
-  </div>
-  <div class = "user-message" >message: テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</div>
-</div>
+<% @rooms.each do |room|%>
+    <div class = "message-box" >
+      <div class = "user-info" >
+        <div class = "user-info__number"> <%=room.id%> )</div>
+        <div class = "user-info__name" >名前/  <%=room.user.name %></div>
+        <div class = "user-info__furigana" >ふりがな/  <%=room.user.furigana %></div>
+        <div class = "user-info__school" >学校/ <%=room.user.school %></div>
+      </div>
+      <div class = "user-message" >message /
+        <%room.talks.each do |talk|%>
+          <%=talk.message%> /
+        <%end%>
+      </div>
+    </div>
 
-
-
-
-<div class = "message-box" >
-  <div class = "user-info" >
-    <div class = "user-info__name" >名前:</div>
-    <div class = "user-info__furigana" >ふりがな:</div>
-    <div class = "user-info__school" >学校:</div>
-  </div>
-  <div class = "user-message" >message: テストテストテストテストテストテストテストテストテストテストテストテスト</div>
-</div>
-
-
-<div class = "message-box" >
-  <div class = "user-info" >
-    <div class = "user-info__name" >名前:</div>
-    <div class = "user-info__furigana" >ふりがな:</div>
-    <div class = "user-info__school" >学校:</div>
-  </div>
-  <div class = "user-message" >message: テストテストテストテストテストテストテストテストテストテストテストテスト</div>
-</div>
-
-<div class = "message-box" >
-  <div class = "user-info" >
-    <div class = "user-info__name" >名前:</div>
-    <div class = "user-info__furigana" >ふりがな:</div>
-    <div class = "user-info__school" >学校:</div>
-  </div>
-  <div class = "user-message" >message: テストテストテストテストテストテストテストテストテストテストテストテスト</div>
-</div>
-
-<div class = "message-box" >
-  <div class = "user-info" >
-    <div class = "user-info__name" >名前:</div>
-    <div class = "user-info__furigana" >ふりがな:</div>
-    <div class = "user-info__school" >学校:</div>
-  </div>
-  <div class = "user-message" >message: テストテストテストテストテストテストテストテストテストテストテストテスト</div>
-</div>
-
-<div class = "message-box" >
-  <div class = "user-info" >
-    <div class = "user-info__name" >名前:</div>
-    <div class = "user-info__furigana" >ふりがな:</div>
-    <div class = "user-info__school" >学校:</div>
-  </div>
-  <div class = "user-message" >message: テストテストテストテストテストテストテストテストテストテストテストテスト</div>
-</div>
+<%end%>
