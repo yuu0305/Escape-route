@@ -1,7 +1,7 @@
 
 .chat-main{
   padding-top: 80px;
-  background: #C0C0C0;
+  background: #444444;
   min-height: calc(100vh - 100px);
   padding-bottom: 100px;
   &__content{
@@ -10,6 +10,7 @@
     margin: 0 auto;
     background: #FFF;
     overflow: scroll;
+    border-radius: 20px;
     .time{
       text-align:center;
       padding-top: 10px;
@@ -23,8 +24,8 @@
     padding: 20px;
     color: #fff;
     background-color: #005FFF;
-    border-radius: 20px;
     margin-left: 400px;
+    border-radius: 20px;
   }
   .my-chat::before{
     content: '';
@@ -33,8 +34,8 @@
     width: 0;
     height: 0;
     right: -15px;
-    top: 20px;
-    border-left: 15px solid #005FFF;
+    top: 15px;
+    border-left: 20px solid #005FFF;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
 
@@ -61,7 +62,7 @@
     height: 0;
     left: -15px;
     top: 20px;
-    border-right: 15px solid #EEE;
+    border-right: 20px solid #EEE;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
   }
