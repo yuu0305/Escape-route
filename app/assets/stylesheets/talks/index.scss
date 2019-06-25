@@ -15,14 +15,16 @@
       padding-top: 10px;
     }
   .my-chat{
-    width: 200px;
+    min-width: 100px;
+    max-width: 550px;
+    float: right;
     margin: 20px;
     position: relative;
     padding: 20px;
     color: #fff;
     background-color: #005FFF;
     border-radius: 10px;
-    margin-left: 530px;
+    margin-left: 400px;
   }
   .my-chat::before{
     content: '';
@@ -41,15 +43,16 @@
 
 
   .the_other_person-chat{
-    width: 200px;
+    min-width: 100px;
+    max-width: 540px;
+    display: table;
     margin: 20px;
     position: relative;
     padding: 20px;
     background-color: #EEE;
     border: 1px solid #EEE;
-    border-radius: 10px;         /* 角丸を指定 */
+    border-radius: 10px;
   }
-  /* 三角アイコン - 枠線付きの吹き出し */
   .the_other_person-chat::before{
     content: '';
     position: absolute;
@@ -84,11 +87,13 @@
   background: #EEEEEE;
   position: fixed;
   bottom: 0;
+  border-radius: 60px;
   .message-form{
     width: 1000px;
     height: 80px;
     margin-top: 10px;
     margin-left: 200px;
+    border-radius: 10px;
   }
   .submit-btn{
   border-radius : 10px;
