@@ -6,7 +6,7 @@ class TalksController < ApplicationController
     @talk = Talk.new
     @talks = Talk.where(users_room_id: params[:users_room_id])
     if @talks.present?
-      @time = @talks.first.created_at.time
+      @time = @talks.first.created_at.in_time_zone('Tokyo').strftime('%Y年%m月%d日 %H:%M')
     end
     @user = User.find(current_user.id)
   end
