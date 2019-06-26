@@ -1,10 +1,23 @@
+
+
 .top-content{
+  height: 100vh;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 15s infinite;
+  @-webkit-keyframes bg-color {
+    0% { background-color: #FFCCFF;  }
+    20% { background-color: #9b59b6; }
+    60% { background-color: #CD5C5C; }
+    75% { background-color:  #800000; }
+    90% { background-color: #FF6633; }
+    100% { background-color: #FFCCCC; }
+  }
   .top-word{
     color: #00FFFF;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin-top: 300px;
+    padding-top: 300px;
     display: none;
   }
 
@@ -25,3 +38,5 @@
     }
   }
 }
+
+

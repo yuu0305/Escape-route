@@ -1,28 +1,32 @@
 
 .chat-main{
   padding-top: 80px;
-  background: #333333;
+  background: #444444;
   min-height: calc(100vh - 100px);
   padding-bottom: 100px;
   &__content{
+
     width: 800px;
     min-height: calc(100vh - 100px);
     margin: 0 auto;
     background: #FFF;
     overflow: scroll;
+    border-radius: 20px;
     .time{
       text-align:center;
       padding-top: 10px;
     }
   .my-chat{
-    width: 200px;
+    min-width: 100px;
+    max-width: 550px;
+    float: right;
     margin: 20px;
     position: relative;
     padding: 20px;
     color: #fff;
     background-color: #005FFF;
-    border-radius: 10px;
-    margin-left: 530px;
+    margin-left: 300px;
+    border-radius: 20px;
   }
   .my-chat::before{
     content: '';
@@ -31,8 +35,8 @@
     width: 0;
     height: 0;
     right: -15px;
-    top: 20px;
-    border-left: 15px solid #005FFF;
+    top: 15px;
+    border-left: 20px solid #005FFF;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
 
@@ -41,15 +45,17 @@
 
 
   .the_other_person-chat{
-    width: 200px;
-    margin: 20px;
+    min-width: 100px;
+    max-width: 540px;
+    float: left;
+    // display: table;
+    margin: 20px 300px 10px 20px;
     position: relative;
     padding: 20px;
     background-color: #EEE;
     border: 1px solid #EEE;
-    border-radius: 10px;         /* 角丸を指定 */
+    border-radius: 20px;
   }
-  /* 三角アイコン - 枠線付きの吹き出し */
   .the_other_person-chat::before{
     content: '';
     position: absolute;
@@ -58,7 +64,7 @@
     height: 0;
     left: -15px;
     top: 20px;
-    border-right: 15px solid #EEE;
+    border-right: 20px solid #EEE;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
   }
@@ -84,11 +90,13 @@
   background: #EEEEEE;
   position: fixed;
   bottom: 0;
+  border-radius: 60px;
   .message-form{
     width: 1000px;
     height: 80px;
     margin-top: 10px;
     margin-left: 200px;
+    border-radius: 10px;
   }
   .submit-btn{
   border-radius : 10px;
