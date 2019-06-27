@@ -5,7 +5,6 @@ class NotifiesController < ApplicationController
 
   def create
     @notify = Notify.new(notify_params)
-    # binding.pry
     @notify.save
   end
 
