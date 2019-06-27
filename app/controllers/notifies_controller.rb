@@ -12,7 +12,7 @@ class NotifiesController < ApplicationController
 
 private
   def notify_params
-    params.require(:notify).permit(:school,:grade ,:text)
+    params.require(:notify).permit(:school,:grade ,:text ,:image)
   end
 
 end
