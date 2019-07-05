@@ -14,7 +14,11 @@ class TalksController < ApplicationController
   def create
     @talk =Talk.new(talk_params)
     @talk.save
-    redirect_to "/users_rooms/#{@room.id}/talks"
+    respond_to do |format|
+      format.html { redirect_to "/users_rooms/#{@room.id}/talks" }
+      format.json
+    end
+    # redirect_to "/users_rooms/#{@room.id}/talks"
   end
 
   private
