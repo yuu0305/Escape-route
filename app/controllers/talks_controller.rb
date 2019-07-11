@@ -25,7 +25,7 @@ class TalksController < ApplicationController
       format.html { redirect_to "/users_rooms/#{@room.id}/talks" }
       format.json
     end
-    # redirect_to "/users_rooms/#{@room.id}/talks"
+
   end
 
 
@@ -50,9 +50,3 @@ class TalksController < ApplicationController
     end
   end
 end
-
-
-
-# params.require(:talk).permit(:message).merge(user_id: params[:user_id])
-
-# user_id: current_user.id
