@@ -4,17 +4,11 @@ $(function(){
 
 
     var html = `<div class="my-chat">
-                 ${talk.message}
+                ${talk.message.replace(/\r?\n/g,"<br>")}
                 </div>`
     return html;
   }
 
-  // function scroll_view(){
-  //   $(".chat-main__content").animate(
-  //     { scrollTop: $(".chat-area")[0].scrollHeight},
-  //     "10000"
-  //   )
-  // }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -28,12 +22,9 @@ $(function(){
   })
 
   .done(function(data){
-    console.log(data);
     var html = buildHTML(data);
-    console.log(html);
     $('.chat-area').append(html)
     $('.message-form').val('')
-    // scroll_view();
     })
 
   .fail(function(){
