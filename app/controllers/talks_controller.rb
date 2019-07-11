@@ -1,6 +1,8 @@
 class TalksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_users_room
+  before_action :check_user
+  before_action :user_find
 
   def index
     @talk = Talk.new
@@ -26,6 +28,7 @@ class TalksController < ApplicationController
     # redirect_to "/users_rooms/#{@room.id}/talks"
   end
 
+
   private
   def talk_params
     params.require(:talk).permit(:message).merge(user_id: current_user.id ,users_room_id: params[:users_room_id])
@@ -33,6 +36,18 @@ class TalksController < ApplicationController
 
   def set_users_room
     @room = UsersRoom.find(params[:users_room_id])
+  end
+
+  def user_find
+    @user = User.find(current_user.id)
+  end
+
+  def check_user
+    if user_signed_in? && @user.allowed != true
+      if current_user.id != @room.user_id
+        redirect_to (root_path)
+      end
+    end
   end
 end
 
