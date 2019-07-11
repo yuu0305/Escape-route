@@ -9,13 +9,6 @@ $(function(){
     return html;
   }
 
-  scrollview = () => {
-    console.log("scroll")
-    $('.chat-main__content').animate({
-      scrollTop: $(".chat-main").scrollHeight });
-  }
-
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -31,7 +24,7 @@ $(function(){
     var html = buildHTML(data);
     $('.chat-area').append(html)
     $('.message-form').val('')
-    scrollview();
+    console.log("test")
     })
 
   .fail(function(){

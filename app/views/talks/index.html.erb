@@ -4,17 +4,19 @@
     <div class = "time">
       <%= @time%>
     </div>
-    <% @talks.each do |talk|%>
-      <% if talk.user.id == current_user.id %>
-        <div class = "my-chat">
-          <%= raw(talk.message.gsub(/\n/, "<br>"))%>
-        </div>
-      <% else %>
-        <div class = "the_other_person-chat">
-          <%= raw(talk.message.gsub(/\n/, "<br>"))%>
-        </div>
-      <% end %>
-    <%end%>
+    <div class = "chat-area">
+      <% @talks.each do |talk|%>
+        <% if talk.user.id == current_user.id %>
+          <div class = "my-chat">
+            <%= raw(talk.message.gsub(/\n/, "<br>"))%>
+          </div>
+        <% else %>
+          <div class = "the_other_person-chat">
+            <%= raw(talk.message.gsub(/\n/, "<br>"))%>
+          </div>
+        <% end %>
+      <%end%>
+    </div>
   </div>
 </div>
 
