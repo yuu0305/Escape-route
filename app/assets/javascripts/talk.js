@@ -1,8 +1,5 @@
 $(function(){
-
   function buildHTML(talk){
-
-
     var html = `<div class="my-chat">
                 ${talk.message.replace(/\r?\n/g,"<br>")}
                 </div>`
@@ -18,18 +15,18 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
-  })
-
-  .done(function(data){
-    var html = buildHTML(data);
-    $('.chat-area').append(html)
-    $('.message-form').val('')
-    console.log("test")
     })
 
-  .fail(function(){
-    alert('error');//送信できなければエラーのアラート
-  });
-})
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.chat-area').append(html)
+      $('.message-form').val('')
+      console.log("test")
+      })
+
+    .fail(function(){
+      alert('error'); //送信できなければエラーのアラート
+    });
+  })
 })
 

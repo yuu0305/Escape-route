@@ -10,7 +10,6 @@ class TalksController < ApplicationController
     if @talks.present?
       @time = @talks.first.created_at.in_time_zone('Tokyo').strftime('%Y年%m月%d日 %H:%M')
     end
-    @user = User.find(current_user.id)
 
     respond_to do |format|
       format.html
@@ -49,4 +48,5 @@ class TalksController < ApplicationController
       end
     end
   end
+
 end

@@ -2,7 +2,6 @@ class Talk < ApplicationRecord
   validates :message , presence: true
   belongs_to :user, optional: true
   belongs_to :users_room
-
 end
 
 # Error: user must exist
