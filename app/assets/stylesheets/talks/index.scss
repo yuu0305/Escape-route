@@ -16,72 +16,75 @@
       text-align:center;
       padding-top: 10px;
     }
-  .my-chat{
-    min-width: 100px;
-    max-width: 550px;
-    float: right;
-    margin: 20px;
-    position: relative;
-    padding: 20px;
-    color: #fff;
-    background-color: #005FFF;
-    margin-left: 300px;
-    border-radius: 20px;
-  }
-  .my-chat::before{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    right: -15px;
-    top: 15px;
-    border-left: 20px solid #005FFF;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+    .chat-area{
+      height: 100%;
+      width: 100%;
+      .my-chat{
+        min-width: 100px;
+        max-width: 550px;
+        float: right;
+        margin: 20px;
+        position: relative;
+        padding: 20px;
+        color: #fff;
+        background-color: #005FFF;
+        margin-left: 300px;
+        border-radius: 20px;
+      }
+      .my-chat::before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        right: -15px;
+        top: 15px;
+        border-left: 20px solid #005FFF;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
 
-  }
+      }
 
 
 
-  .the_other_person-chat{
-    min-width: 100px;
-    max-width: 540px;
-    float: left;
-    // display: table;
-    margin: 20px 300px 10px 20px;
-    position: relative;
-    padding: 20px;
-    background-color: #EEE;
-    border: 1px solid #EEE;
-    border-radius: 20px;
+      .the_other_person-chat{
+        min-width: 100px;
+        max-width: 540px;
+        float: left;
+        // display: table;
+        margin: 20px 300px 10px 20px;
+        position: relative;
+        padding: 20px;
+        background-color: #EEE;
+        border: 1px solid #EEE;
+        border-radius: 20px;
+      }
+      .the_other_person-chat::before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        left: -15px;
+        top: 20px;
+        border-right: 20px solid #EEE;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+      }
+      .the_other_person-chat::after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        left: -12px;
+        top: 20px;
+        border-right: 15px solid #EEE;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+      }
+      }
   }
-  .the_other_person-chat::before{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    left: -15px;
-    top: 20px;
-    border-right: 20px solid #EEE;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-  }
-  .the_other_person-chat::after{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    left: -12px;
-    top: 20px;
-    border-right: 15px solid #EEE;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-  }
-  }
-
 }
 
 .chat-form{

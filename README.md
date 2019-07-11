@@ -38,3 +38,16 @@ talkテーブル
 ・user_id
 ・message
 
+
+
+
+
+<% if talk.user.id == current_user.id %>
+        <div class = "my-chat">
+          <%= raw(talk.message.gsub(/\n/, "<br>"))%>
+        </div>
+      <% else %>
+        <div class = "the_other_person-chat">
+          <%= raw(talk.message.gsub(/\n/, "<br>"))%>
+        </div>
+      <% end %>
