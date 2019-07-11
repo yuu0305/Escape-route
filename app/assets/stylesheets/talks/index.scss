@@ -10,15 +10,13 @@
     min-height: calc(100vh - 100px);
     margin: 0 auto;
     background: #FFF;
-    overflow: scroll;
+    // overflow: scroll;
+    overflow: auto;
     border-radius: 20px;
     .time{
       text-align:center;
       padding-top: 10px;
     }
-    .chat-area{
-      height: 100%;
-      width: 100%;
       .my-chat{
         min-width: 100px;
         max-width: 550px;
@@ -85,7 +83,7 @@
       }
       }
   }
-}
+
 
 .chat-form{
   width: 100vw;

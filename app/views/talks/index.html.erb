@@ -1,18 +1,11 @@
 <%= render 'shared/talk-header' %>
-
 <div class = "chat-main">
-
   <div class = "chat-main__content">
-
     <div class = "time">
-
-     <%= @time%>
+      <%= @time%>
     </div>
-
-    <div class = "chat-area">
     <% @talks.each do |talk|%>
-      
-<% if talk.user.id == current_user.id %>
+      <% if talk.user.id == current_user.id %>
         <div class = "my-chat">
           <%= raw(talk.message.gsub(/\n/, "<br>"))%>
         </div>
@@ -22,7 +15,6 @@
         </div>
       <% end %>
     <%end%>
-    </div>
   </div>
 </div>
 
