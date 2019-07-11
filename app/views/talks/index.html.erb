@@ -1,14 +1,9 @@
 <%= render 'shared/talk-header' %>
-
 <div class = "chat-main">
-
   <div class = "chat-main__content">
-
     <div class = "time">
-
-     <%= @time%>
+      <%= @time%>
     </div>
-
     <% @talks.each do |talk|%>
       <% if talk.user.id == current_user.id %>
         <div class = "my-chat">
@@ -24,7 +19,7 @@
 </div>
 
 <div class = "chat-form">
-  <%= form_with model: [@room, @talk],local: true do |f|  %>
+  <%= form_with model: [@room, @talk], id: "new_message",local: true do |f|  %>
   <%= f.text_area :message, cols:"30" ,placeholder:"message" ,class:"message-form" %>
   <input type="submit" value="送信", class= "submit-btn">
   <% end%>

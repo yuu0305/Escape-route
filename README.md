@@ -38,3 +38,5 @@ talkテーブル
 ・user_id
 ・message
 
+
+
