@@ -24,7 +24,6 @@ class TalksController < ApplicationController
       format.html { redirect_to "/users_rooms/#{@room.id}/talks" }
       format.json
     end
-
   end
 
 
@@ -42,9 +41,10 @@ class TalksController < ApplicationController
   end
 
   def check_user
+    @user = User.find(current_user.id)
     if user_signed_in? && @user.allowed != true
       if current_user.id != @room.user_id
-        redirect_to (root_path)
+        redirect_to (routes_path)
       end
     end
   end
